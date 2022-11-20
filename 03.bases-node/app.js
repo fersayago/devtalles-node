@@ -1,10 +1,15 @@
-console.clear()
+const fs = require('fs');
 
 const base = 7;
-console.log('=================')
-console.log(`tabla de ${base}:`)
-console.log('=================')
+
+let salida = '';
 
 for (let i = 1; i<=10; i++){
-  console.log(`${base} * ${i} => ${base * i}`)
+  salida += `${base} x ${i} = ${base * i}\n`
 }
+
+fs.writeFile(`tabla-del-${base}.txt`, salida, (err) => {
+  if (err) throw err;
+
+  console.log(`tabla del ${base} creada`)
+})

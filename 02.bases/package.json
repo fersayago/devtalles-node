@@ -9,5 +9,9 @@
     "listen": "nodemon src/app.js"
   },
   "author": "Fernando Sayago",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "get-age": "^1.0.1",
+    "uuid": "^10.0.0"
+  }
 }

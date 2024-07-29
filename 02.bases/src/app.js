@@ -59,9 +59,17 @@
 //   .finally(() => console.log('Pokemon fetched!'));
 
 // ! 08. Patron adapter con axios
-const getPokemonById = require('./js-foundation/08.adapterAxios')
+// const getPokemonById = require('./js-foundation/08.adapterAxios')
 
-getPokemonById(4)
-  .then((pokemon) => console.log(pokemon))
-  .catch((err) => console.log({err}))
-  .finally(() => console.log('Pokemon fetched!'));
+// getPokemonById(4)
+//   .then((pokemon) => console.log(pokemon))
+//   .catch((err) => console.log({err}))
+//   .finally(() => console.log('Pokemon fetched!'));
+
+// ! Build Logger
+const { buildLogger } = require('./plugins')
+
+const logger = buildLogger('Pokemon Service')
+
+logger.log("Hello from Pokemon Service")
+logger.error("Error from Pokemon Service")

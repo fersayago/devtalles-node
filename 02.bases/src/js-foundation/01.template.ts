@@ -4,7 +4,3 @@ export const emailTemplate = `
   <p>Thanks you for your order</p>
 </div>
 `
-
-// module.exports = {
-//   emailTemplate
-// }

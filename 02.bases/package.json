@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js",
-    "listen": "nodemon src/app.js"
+    "dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
   },
   "author": "Fernando Sayago",
   "license": "ISC",
@@ -15,5 +16,13 @@
     "get-age": "^1.0.1",
     "uuid": "^10.0.0",
     "winston": "^3.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.2",
+    "@types/uuid": "^10.0.0",
+    "nodemon": "^3.1.4",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }

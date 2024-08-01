@@ -67,7 +67,7 @@
 //   .finally(() => console.log('Pokemon fetched!'));
 
 // ! Build Logger
-const { buildLogger } = require('./plugins')
+import { buildLogger } from './plugins/logger.plugin'
 
 const logger = buildLogger('Pokemon Service')
 
